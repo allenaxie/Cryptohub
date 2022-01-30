@@ -1,12 +1,22 @@
+import React from 'react';
+import { Switch, Route, Link } from 'react-router-dom';
+import { Layout, Typography, Space } from 'antd';
+import { Navbar } from './components'
 
-import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <main className="App">
-      <h1>Cryptohub</h1>
-    </main>
-  );
-}
+  <div className="app">
+    <div className="navbar">
+      <Navbar/>
+    </div>
+    <div className="main">
+      
+    </div>
+    <div className="footer">
+
+    </div>
+  </div>);
+};
 
 export default App;
