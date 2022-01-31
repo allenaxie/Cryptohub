@@ -11,7 +11,6 @@ const Navbar = () => {
         <Avatar src={icon} size="large"/>
         <Typography.Title level={2} className="logo">
             <Link to="/">Cryptohub</Link>
-            
         </Typography.Title>
         {/* Controls menu for mobile devices */} 
         {/* <Button className="menu-control-container"></Button> */}
