@@ -36,6 +36,7 @@ a:hover{
     padding: 20px;
 }
 
+/* Navbar */
 .nav-container {
     position: fixed;
     left:0;
@@ -64,4 +65,15 @@ a:hover{
     width: 100px;
 }
 
-/* line 61 */
+/* Menu control container */
+
+
+
+/* Footer */
+.footer {
+    background-color: #001529;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
