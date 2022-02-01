@@ -2,7 +2,7 @@
     --text-primary: #000;
     --bgPrimary:#fff;
     --bgSecondary: #F9F9F9;
-    --pink: #0071bd;
+    --blue: #0071bd;
     --light-blue: #e6f7ff;
     --border:#d9d9d9;
 }
@@ -14,7 +14,7 @@
 }
 
 a:hover{
-    color: var(--pink) !important;
+    color: var(--blue) !important;
 }
 
 .app{
@@ -66,7 +66,74 @@ a:hover{
 }
 
 /* Menu control container */
+.menu-controler-container {
+    display: none !important;
+    position: absolute !important;
+    right: 10px !important;
+    top: 25px !important;
+    font-size: 1.2rem !important;
+    background-color: var(--bgSecondary);
+    border: none !important;
+}
 
+.loader {
+    height: 81vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries */
+@media screen and (max-width:1300px) {
+    .main{
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .main{
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .app {
+        flex-direction: column;
+        overflow:hidden;
+    }
+
+    .navbar {
+        flex: 1;
+    }
+
+    .main {
+        flex: 1;
+        margin-top: 90px;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    .nav-cotnainer {
+        height: 8vh;
+        position:fixed;
+        width: 100%;
+        z-index: 99;
+        background-color:var(--bgSecondary);
+    }
+
+    .ant-menu {
+        position: absolute;
+        right: 0;
+    }
+
+    .home-title {
+        font-size:1.4rem !important;
+    }
+
+    .show-more{
+        font-size:1.3rem !important;
+    }
+}
 
 
 /* Footer */
