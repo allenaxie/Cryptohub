@@ -6,7 +6,7 @@ import { Card, Row, Col, Input } from 'antd';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 
 const Cryptocurrencies = ({simplified}) => {
-
+  // Simplified is true on homepage
   const count = simplified ? 10 : 100;
   const {data: cryptosList, isFetching } = useGetCryptosQuery(count);
   const [cryptos, setCryptos] = useState([]);
@@ -15,7 +15,6 @@ const Cryptocurrencies = ({simplified}) => {
   console.log(cryptos);
 
   useEffect(function () {
-    
     // updates list of crypto displayed everytime search input changes
     const filteredData = cryptosList?.data?.coins.filter((coin) => coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
     setCryptos(filteredData);
@@ -25,9 +24,12 @@ const Cryptocurrencies = ({simplified}) => {
 
   return (
     <>
-    <div className="search-crypto" >
+    {!simplified &&
+    
+    (<div className="search-crypto" >
       <Input placeholder="Search Cryptocurrency" onChange={(e)=> setSearchTerm(e.target.value)}/>
-    </div>
+    </div>)
+    }
       <Row gutter={[32,32]} className="crypto-card-container">
         {cryptos?.map((currency) => (
           <Col
