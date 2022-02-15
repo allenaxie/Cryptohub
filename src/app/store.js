@@ -2,7 +2,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import { cryptoApi} from '../services/cryptoApi'; // Connect Crypto API with store
-import { cryptoNewsApi} from '../services/cryptoNewsApi'; // Connect Crypto API with store
+import { cryptoNewsApi} from '../services/cryptoNewsApi'; // Connect Crypto News API to store
 
 
 export default configureStore({

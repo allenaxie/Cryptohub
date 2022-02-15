@@ -15,7 +15,7 @@ const News = ({simplified}) => {
     // we defined two variables (newsCategory, count) in our query in cryptoNewsApi
     useGetCryptoNewsQuery({ newsCategory: 'Cryptocurrency', count: simplified ? 10 : 100})
 
-  
+    console.log(cryptoNews)
 
   return (
     <div>
