@@ -12,8 +12,6 @@ const Cryptocurrencies = ({simplified}) => {
   const [cryptos, setCryptos] = useState([]);
   const [searchTerm, setSearchTerm ] = useState('');
 
-  console.log(cryptos);
-
   useEffect(function () {
     // updates list of crypto displayed everytime search input changes
     const filteredData = cryptosList?.data?.coins.filter((coin) => coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -31,15 +29,15 @@ const Cryptocurrencies = ({simplified}) => {
     </div>)
     }
       <Row gutter={[32,32]} className="crypto-card-container">
-        {cryptos?.map((currency) => (
+        {cryptos?.map((currency,idx) => (
           <Col
           xs={24}
           sm={12}
           lg={6}
           className="crypto-card"
-          key={currency.id}
+          key={currency.idx}
           >
-            <Link to={`/crypto/${currency.id}`}>
+            <Link to={`/crypto/${currency.rank}`}> 
               <Card 
               title={`${currency.rank}. ${currency.name}`}
               extra ={<img className="crypto-image" src={currency.iconUrl}/>}
@@ -49,7 +47,6 @@ const Cryptocurrencies = ({simplified}) => {
                 <p>Market Cap: {millify(currency.marketCap)}</p>
                 <p>Daily Change: {millify(currency.change)}%</p>
               </Card>
-            
             </Link>
           </Col>
         ))}

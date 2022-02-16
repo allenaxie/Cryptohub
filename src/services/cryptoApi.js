@@ -14,13 +14,19 @@ export const cryptoApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl }),
     // Endpoints to fetch data
     endpoints: (builder) => ({
+        // Crypto index
         getCryptos: builder.query({
             query: (count) => createRequest(`/coins?limit=${count}`),
-        })
+        }),
+        // CryptoDetails
+        // getCryptoDetails: builder.query({
+        //     query: (coinId) => createRequest(`/coin/${coinId}`),
+        // })
     })
 })
 
 export const {
     // Redux toolkit Hook 
     useGetCryptosQuery, //(from getCryptos)
+    useGetCryptoDetailsQuery,
 } = cryptoApi;

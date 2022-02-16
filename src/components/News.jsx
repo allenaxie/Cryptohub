@@ -27,7 +27,7 @@ const News = ({simplified}) => {
 
   return (
     <Row gutter={[24, 24]}>
-      {/* if not on homepage, execute this code */}
+      {/* if not on homepage, display news filter option */}
       {!simplified && (
         <Col span={24}>
           <Select
