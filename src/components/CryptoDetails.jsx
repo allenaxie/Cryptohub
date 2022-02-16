@@ -34,7 +34,7 @@ const CryptoDetails = () => {
   const genericStats = [
     { title: 'Number Of Markets', value: cryptoDetails?.numberOfMarkets, icon: <FundOutlined /> },
     { title: 'Number Of Exchanges', value: cryptoDetails?.numberOfExchanges, icon: <MoneyCollectOutlined /> },
-    { title: 'Aprroved Supply', value: cryptoDetails?.approvedSupply ? <CheckOutlined /> : <StopOutlined />, icon: <ExclamationCircleOutlined /> },
+    { title: 'Aprroved Supply', value: cryptoDetails?.supply.confirmed ? <CheckOutlined /> : <StopOutlined />, icon: <ExclamationCircleOutlined /> },
     { title: 'Total Supply', value: `$ ${parseFloat(cryptoDetails?.supply.total)}`, icon: <ExclamationCircleOutlined /> },
     { title: 'Circulating Supply', value: `$ ${parseFloat(cryptoDetails?.supply.circulating)}`, icon: <ExclamationCircleOutlined /> },
   ];
@@ -70,6 +70,27 @@ const CryptoDetails = () => {
             </p>
           </Col>
           {stats.map(({ icon, title, value}) => (
+            <Col className="coin-stats">
+              <Col className="coin-stats-name">
+                <Text>{icon}</Text>
+                <Text>{title}</Text>
+              </Col>
+              <Col span={12}>
+                <Text className="stats">{value}</Text>
+              </Col>
+            </Col>
+          ))}
+        </Col>
+        <Col className="other-stats-info">
+          <Col className="coin-value-statistics-heading">
+            <Title level={3} className="coin-details-heading">
+              Other Statistics
+            </Title>
+            <p>
+              An overview showing the statistics of all cryptocurrencies
+            </p>
+          </Col>
+          {genericStats.map(({ icon, title, value}) => (
             <Col className="coin-stats">
               <Col className="coin-stats-name">
                 <Text>{icon}</Text>
