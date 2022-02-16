@@ -21,12 +21,19 @@ export const cryptoApi = createApi({
         // CryptoDetails
         getCryptoDetails: builder.query({
             query: (coinId) => createRequest(`/coin/${coinId}`),
+        }),
+        // Line Chart
+        getCryptoHistory: builder.query({
+            query: ({coinId, timePeriod }) => createRequest(`/coin/${coinId}/history?${timePeriod}`),
         })
     })
 })
 
+
+
 export const {
     // Redux toolkit Hook 
     useGetCryptosQuery, //(from getCryptos endpoint property)
-    useGetCryptoDetailsQuery
+    useGetCryptoDetailsQuery,
+    useGetCryptoHistoryQuery,
 } = cryptoApi;
