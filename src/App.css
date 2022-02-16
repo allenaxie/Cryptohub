@@ -177,13 +177,13 @@ a:hover{
     font-weight: 700;
     font-size: 1.4rem;
     margin-top: 20px;
-    color: var(--light-blue);
+    color: var(--blue);
 }
 
 .coin-details-heading {
     font-weight: 700 !important;
     margin-top: 20px !important;
-    color: var(--light-blue) !important;
+    color: black !important;
 }
 
 .coin-stats {
@@ -219,7 +219,7 @@ a:hover{
 
 .coin-desc-link h2{
     font-weight: 700;
-    color: var(--pink);
+    color: var(--blue);
 }
 
 .coin-desc-link p{
@@ -228,7 +228,7 @@ a:hover{
 }
 
 .coin-desc-link a{
-    color: var(--pink);
+    color: var(--blue);
 }
 
 .coin-desc-link h3{
@@ -258,7 +258,7 @@ a:hover{
 }
 
 .coin-link a{
-    color: var(--pink);
+    color: var(--blue);
     font-weight: 700;
     font-size: 1rem;
 }
