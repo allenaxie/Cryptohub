@@ -18,6 +18,7 @@ const Cryptocurrencies = ({simplified}) => {
     setCryptos(filteredData);
   }, [cryptosList, searchTerm])
 
+  // prevent app from crashing by retrieving data before page renders
   if(isFetching) return 'Loading...';
 
   return (
