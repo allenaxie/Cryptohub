@@ -24,7 +24,7 @@ export const cryptoApi = createApi({
         }),
         // Line Chart
         getCryptoHistory: builder.query({
-            query: ({coinId, timePeriod }) => createRequest(`/coin/${coinId}/history?${timePeriod}`),
+            query: ({coinId, timeperiod }) => createRequest(`/coin/${coinId}/history?${timeperiod}`),
         })
     })
 })
