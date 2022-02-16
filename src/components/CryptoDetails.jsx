@@ -17,8 +17,6 @@ const CryptoDetails = () => {
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
   const cryptoDetails = data?.data?.coin;
 
-  // console.log('details-coinId',coinId)
-  // console.log('details-data',data)
   console.log('details-cryptoDetails',cryptoDetails)
 
   const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
@@ -26,8 +24,9 @@ const CryptoDetails = () => {
   const stats = [
     { title: 'Price to USD', value: `$ ${cryptoDetails?.price && millify(cryptoDetails?.price)}`, icon: <DollarCircleOutlined /> },
     { title: 'Rank', value: cryptoDetails?.rank, icon: <NumberOutlined /> },
-    { title: '24h Volume', value: `$ ${cryptoDetails?.volume && millify(cryptoDetails?.volume)}`, icon: <ThunderboltOutlined /> },
-    { title: 'Market Cap', value: `$ ${cryptoDetails?.marketCap && millify(cryptoDetails?.marketCap)}`, icon: <DollarCircleOutlined /> },
+    // need some sort of "?." or try/catch for bracket notation. 24hvolume returns undefined on initial renders
+    // { title: '24h Volume', value:`$ ${parseInt(cryptoDetails["24hVolume"]) && parseInt(cryptoDetails["24hVolume"])}`, icon: <ThunderboltOutlined /> },
+    { title: 'Market Cap', value: `$ ${cryptoDetails?.marketCap && cryptoDetails?.marketCap}`, icon: <DollarCircleOutlined /> },
     { title: 'All-time-high(daily avg.)', value: `$ ${parseFloat(cryptoDetails?.allTimeHigh?.price)}`, icon: <TrophyOutlined /> },
   ];
 
