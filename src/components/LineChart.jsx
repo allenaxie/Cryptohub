@@ -1,7 +1,7 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Row, Col, Typography } from 'antd';
-import { Chart as ChartJS } from 'chart.js/auto'
+import { Chart as ChartJS } from 'chart.js/auto';
 
 const { Title } = Typography;
 
@@ -13,9 +13,9 @@ const Linechart = ({coinHistory, currentPrice, coinName}) => {
     const coinTimestamp = []
 
     for (let i = 0; i < coinHistory?.data?.history?.length; i += 1 ) {
-        // add each price to coinPrice array
-        coinPrice.push(coinHistory.data.history[i].price);
-        coinTimestamp.push(new Date(coinHistory.data.history[i].timestamp * 1000).toLocaleDateString());
+        // add each price and timestamp to new arrays
+        coinPrice.push(coinHistory?.data?.history[i]?.price);
+        coinTimestamp.push(new Date(coinHistory?.data?.history[i]?.timestamp * 1000).toLocaleDateString());
     }
 
     const data = {
@@ -31,13 +31,12 @@ const Linechart = ({coinHistory, currentPrice, coinName}) => {
 
     const options = {
         scales: {
-            yAxes: [
+            y:
                 {
                     ticks: {
                         beginAtZero: true,
                     }
                 }
-            ]
         }
     }
 
