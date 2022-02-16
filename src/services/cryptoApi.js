@@ -19,14 +19,14 @@ export const cryptoApi = createApi({
             query: (count) => createRequest(`/coins?limit=${count}`),
         }),
         // CryptoDetails
-        // getCryptoDetails: builder.query({
-        //     query: (coinId) => createRequest(`/coin/${coinId}`),
-        // })
+        getCryptoDetails: builder.query({
+            query: (coinId) => createRequest(`/coin/${coinId}`),
+        })
     })
 })
 
 export const {
     // Redux toolkit Hook 
-    useGetCryptosQuery, //(from getCryptos)
-    useGetCryptoDetailsQuery,
+    useGetCryptosQuery, //(from getCryptos endpoint property)
+    useGetCryptoDetailsQuery
 } = cryptoApi;
