@@ -24,7 +24,11 @@ export const cryptoApi = createApi({
         }),
         // Line Chart
         getCryptoHistory: builder.query({
-            query: ({coinId, timeperiod }) => createRequest(`/coin/${coinId}/history?${timeperiod}`),
+            query: ({coinId, timeperiod }) => createRequest(`/coin/${coinId}/history?timePeriod=${timeperiod}`),
+        }),
+        // Exchanges
+        getCryptoExchanges: builder.query({
+            query: (coinId ) => createRequest(`/coin/${coinId}/exchanges`),
         })
     })
 })
@@ -36,4 +40,5 @@ export const {
     useGetCryptosQuery, //(from getCryptos endpoint property)
     useGetCryptoDetailsQuery,
     useGetCryptoHistoryQuery,
+    useGetCryptoExchangesQuery,
 } = cryptoApi;
