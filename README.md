@@ -12,12 +12,12 @@ Cryptohub is a fully responsive cryptocurrency tracking application built to pro
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img src="/Users/allenxie/code/cryptohub/public/Cryptohub@2x.png" width=100px height=180px overflow="hidden"> |<img src="/Users/allenxie/code/cryptohub/public/Cryptohub@2x (1).png" width=100px height=180px overflow="hidden"> 
-|<img src="/Users/allenxie/code/cryptohub/public/Cryptohub@2x (2).png" width=100px height=180px overflow="hidden"> |<img src="/Users/allenxie/code/cryptohub/public/Cryptohub@2x (3).png" width=100px height=180px overflow="hidden"> 
+|<img src="https://i.imgur.com/6KwmtbE.png" width=100px height=180px overflow="hidden"> |<img src="https://i.imgur.com/lNuXw0D.png" width=100px height=180px overflow="hidden"> 
+|<img src="https://i.imgur.com/gcHnKVd.png" width=100px height=180px overflow="hidden"> |<img src="https://i.imgur.com/aWZhCuI.png" width=100px height=180px overflow="hidden"> 
 
 ## 💻 Technologies Used 
 
-<img src="/Users/allenxie/code/cryptohub/public/Technologies (copy).png" width=600px>
+<img src="https://i.imgur.com/L06lhAc.png" width=600px>
 
 
 ## ⚛️ Getting Started
